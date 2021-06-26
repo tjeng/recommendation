@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Product Recommendation</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+ <div class="login">
+	<h1> Enter a User Id</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('recommend')}}"method="post">
+    	<input type="text" name="userid" placeholder="User Id"/>
+        <button type="submit" class="btn">Recommend</button>
+    </form>
+
+   <br>
+   <br>
+ </div>
+
+
+</body>
+</html>

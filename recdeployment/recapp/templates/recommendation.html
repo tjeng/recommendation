@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Recommending top 5 items: </title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+ <div style="background-color:white;">
+	<h2>Items purchased:</h2>
+        {% for answ in items%}
+                <p style="text-align: left; font-family: normal; font-size: 
+ 16px;"> {{ answ  }} </p>
+           {% endfor %}
+	
+	<h2>Items recommended:</h2>
+        {% for answ in rec_items%}
+                <p style="text-align: left; font-family: normal; font-size: 
+ 16px;"> {{ answ  }} </p>
+           {% endfor %}
+		   
+ </div>
+
+
+</body>
+</html>
