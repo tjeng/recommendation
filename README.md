@@ -19,12 +19,14 @@ The dataset is randomly split based on interactions into train and test sets, 80
 Collaborative Filtering Matrix Factorization (MF) is used where an mxn matrix (m: number of users, n: number of items) is decomposed into mxk user factor and kxn item factor. The factors are multiplied to get the score for an item for a particular user. The figure below illustrates the matrix factorization. k represents the number of latent factors, or dimensions.
 
 ![picture](./img/mf.jpg)
+
 Figure 1: Illustration of Matrix Factorization Algorithm
 
 
 LightFM package [link](https://making.lyst.com/lightfm/docs/home.html) is used to perform MF. A common loss function for MF is mean square error where the gradient updates to minimize the difference between actual and predicted scores. Such technique is common for explicit feedback data. For this dataset that consists of implicit feedback, ranking of items, where a purchased item ranks higher than a non-purchased item, are of interest. Hence, weighted average ranking pairwise (WARP) loss [link](http://www.thespermwhale.com/jaseweston/papers/wsabie-ijcai.pdf) is used as the loss function. For each user, there is a pair of positive and negative items. A positive item indicates that the user has purchased the item and a negative item indicates that the user has not purchased the item. The loss function only updates when the rank of a negative item exceeds that of a positive item. This approximates a form of active learning that yields a more informative gradient update, where the model samples the number of negative items Q times until the rank of a negative item exceeds that of a positive item. The loss function is described below.
 
 ![picture](./img/loss.jpg)
+
 Figure 2: WARP loss function
 
 # Results
@@ -32,6 +34,7 @@ Figure 2: WARP loss function
 The important parameter to tune is k, the number of dimensions. The table below shows model performance with different values of k:
 
 ![picture](./img/tune.jpg)
+
 Table 1: Model performance in different dimensions
 
 128 dimension is selected as model performance starts to plateau.
