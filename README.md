@@ -8,7 +8,7 @@ Online shopping offers millions of items for users to choose from, but with limi
 
 # Data
 
-GroupBy has provided its internal data (not shared on GitHub) that contains customer product interaction data where there is information on the interaction with an item (search, view, add to cart, or purchase), as well as product brand, and price collected over 1 day. 
+GroupBy has provided its internal data (raw data not shared on GitHub) that contains customer product interaction data where there is information on the interaction with an item (search, view, add to cart, or purchase), as well as product brand, and price collected over 1 day. 
 
 A user-item matrix is created that contains 44,588 users and 17,480 products, with 1M interactions. The interaction is a binary 1 or 0 that indicates whether the user purchases the item or not. This is a form of implicit feedback where user's preference for an item is indirectly inferred from behavior patterns versus explicit feedback where the user gives a rating of the product.
 
