@@ -45,7 +45,7 @@ Precision@5 measures the fraction of items bought out of the 5 recommended items
 
 Recall@5 measures the number of items bought in the top 5 recommendations divided by the total number of items bought
 
-For a demo, the model is served as an API using Flask. The Flask app is deployed on AWS Elastic Beanstalk, with the following url, http://recapp.eba-u3jbujfw.us-east-1.elasticbeanstalk.com/. To use the app, enter a user id. If the user id exists in the existing database of users, top 5 items will be recommended based on the user's purchasing history. If the user is a new user, the top 5 most popular items (purchased by most users) will be displayed instead. Due to proprietary information, user id to test will not be provided.
+For a demo, the model can be served as an API using Flask. To deploy on AWS Elastic Beanstalk, follow instructions in the [link](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create-deploy-python-flask.html), when in the folder ./recdeployment.
 
 # Findings
 
